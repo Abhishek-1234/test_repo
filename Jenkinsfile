@@ -10,7 +10,7 @@ pipeline {
     stage('Backup') {
       steps {
         bat 'mkdir backup'
-        bat 'robocopy c:\\users\\abhishek\\.jenkins\\workspace\\ c:\\users\\abhishek\\.jenkins\\workspace\\backup'
+        bat 'robocopy C:\\Users\\ABHISHEK\\.jenkins\\workspace\\test_repo_main C:\\Users\\ABHISHEK\\.jenkins\\workspace\\test_repo_main\\backup'
       }
     }
 
