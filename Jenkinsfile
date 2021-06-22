@@ -9,8 +9,8 @@ pipeline {
 
     stage('Backup') {
       steps {
-        bat 'mkdir backup'
-        bat 'robocopy C:\\Users\\ABHISHEK\\.jenkins\\workspace\\test_repo_main C:\\Users\\ABHISHEK\\.jenkins\\workspace\\test_repo_main\\backup & IF %ERRORLEVEL% LEQ 1 exit /B 0'
+        bat 'mkdir C:\\users\\abhishek\\desktop\\backup'
+        bat 'robocopy %cd% C:\\Users\\ABHISHEK\\desktop\\backup & IF %ERRORLEVEL% LEQ 1 exit /B 0'
       }
     }
 
