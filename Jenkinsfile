@@ -22,14 +22,14 @@ pipeline {
         stage('parallel2') {
           steps {
             bat 'mkdir C:\\Users\\ABHISHEK\\Desktop\\backup_two'
-            bat 'robocopy %cd% C:\\Users\\ABHISHEK\\Desktop\\backup_one main.exe & IF %ERRORLEVEL% LEQ 1 exit /B 0'
+            bat 'robocopy %cd% C:\\Users\\ABHISHEK\\Desktop\\backup_two main.exe & IF %ERRORLEVEL% LEQ 1 exit /B 0'
           }
         }
 
         stage('parallel3') {
           steps {
             bat 'mkdir C:\\Users\\ABHISHEK\\Desktop\\backup_three'
-            bat 'robocopy %cd% C:\\Users\\ABHISHEK\\Desktop\\backup_one main.exe & IF %ERRORLEVEL% LEQ 1 exit /B 0'
+            bat 'robocopy %cd% C:\\Users\\ABHISHEK\\Desktop\\backup_three main.exe & IF %ERRORLEVEL% LEQ 1 exit /B 0'
           }
         }
 
