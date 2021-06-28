@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'g++ -0 main.exe Hello.cpp'
+        bat 'g++ -o main.exe Hello.cpp'
         bat '.\\main.exe'
       }
     }
