@@ -38,10 +38,11 @@ pipeline {
         }
 
         stage('Parallel_3') {
-          steps {
-            agent{
-              label 'node_three'
+          agent{
+              label 'node_four'
             }
+            steps {
+            
             bat 'robocopy C:\\Users\\ABHISHEK\\Desktop\\ %cd% file_3.txt & IF %ERRORLEVEL% LEQ 1 exit /B 0'
           }
         }
