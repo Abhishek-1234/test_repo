@@ -23,7 +23,7 @@ pipeline {
             label 'node_one'
           }
           steps {
-            bat 'robocopy C:\\Users\\ABHISHEK\\Desktop\\ file1 %cd% & IF %ERRORLEVEL% LEQ 1 exit /B 0'
+            bat 'robocopy C:\\Users\\ABHISHEK\\Desktop\\ %cd% file_1.txt & IF %ERRORLEVEL% LEQ 1 exit /B 0'
           }
         }
 
@@ -33,7 +33,7 @@ pipeline {
           }
           steps {
               
-            bat 'robocopy C:\\Users\\ABHISHEK\\Desktop\\ %cd% file_2 & IF %ERRORLEVEL% LEQ 1 exit /B 0'
+            bat 'robocopy C:\\Users\\ABHISHEK\\Desktop\\ %cd% file_2.txt & IF %ERRORLEVEL% LEQ 1 exit /B 0'
           }
         }
 
@@ -42,7 +42,7 @@ pipeline {
             agent{
               label 'node_three'
             }
-            bat 'robocopy C:\\Users\\ABHISHEK\\Desktop\\ %cd% file_3 & IF %ERRORLEVEL% LEQ 1 exit /B 0'
+            bat 'robocopy C:\\Users\\ABHISHEK\\Desktop\\ %cd% file_3.txt & IF %ERRORLEVEL% LEQ 1 exit /B 0'
           }
         }
 
