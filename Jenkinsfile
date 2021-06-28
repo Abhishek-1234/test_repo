@@ -18,7 +18,7 @@ pipeline {
     stage('Parallel Stages') {
       parallel {
         
-        stage('Parallel_1') {
+        stage('Map.Binaries') {
           agent{
             label 'node_one'
           }
@@ -27,7 +27,7 @@ pipeline {
           }
         }
 
-        stage('Parallel_2') {
+        stage('Map.MDD') {
           agent{
             label 'node_two'
           }
@@ -37,7 +37,7 @@ pipeline {
           }
         }
 
-        stage('Parallel_3') {
+        stage('Map.Metafiles') {
           agent{
               label 'node_four'
             }
